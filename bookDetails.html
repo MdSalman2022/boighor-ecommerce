@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book Details</title>
+    <link rel="stylesheet" href="bookDetails.css" />
+  </head>
+  <body>
+    <div style="background-color: #033926; color: white">
+      <div
+        class="flex-container"
+        style="
+          background-color: #033926;
+          color: white;
+          padding: 10px;
+          max-width: 1600px;
+          margin: auto;
+        "
+      >
+        <p>01812345678</p>
+        <p>Get 50% Off on selected items | Shop Now</p>
+        <div class="flex-container">
+          <p>Eng <i class="fa-solid fa-angle-down"></i></p>
+          <p>Location <i class="fa-solid fa-angle-down"></i></p>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <header class="">
+        <div class="flex-container">
+          <a href="index.html"
+            ><img class="logo" width="10px" src="./assets/logo.png" alt=""
+          /></a>
+          <p style="font-weight: 500; font-size: 14px">
+            Categories <i class="fa-solid fa-angle-down"></i>
+          </p>
+          <p style="font-weight: 500; font-size: 14px">Deals</p>
+          <p style="font-weight: 500; font-size: 14px">What's New</p>
+          <p style="font-weight: 500; font-size: 14px">Delivery</p>
+          <input class="search-input" type="text" placeholder="Search Book" />
+          <p
+            style="font-weight: 500; font-size: 14px"
+            style="font-weight: 500; font-size: 14px"
+            style="font-weight: 500; font-size: 14px"
+            style="font-weight: 500; font-size: 14px"
+          >
+            <i class="fa-regular fa-user"></i> Account
+          </p>
+          <p
+            style="font-weight: 500; font-size: 14px"
+            style="font-weight: 500; font-size: 14px"
+            style="font-weight: 500; font-size: 14px"
+            style="font-weight: 500; font-size: 14px"
+          >
+            <i class="fa-solid fa-cart-shopping"></i> Cart
+          </p>
+        </div>
+      </header>
+      <div class="grid-cols-2">
+        <div>
+          <div class="book-container">
+            <img
+              src="./assets/books/Baisher_Bonna-Tasrif_Khan-2c6fc-274727.jpg"
+              alt=""
+              style="width: 60%"
+            />
+          </div>
+          <div class="flex-container" style="margin-top: 20px">
+            <div class="book-container">
+              <img
+                class="bookImg"
+                src="./assets//books/Baisher_Bonna-Tasrif_Khan-2c6fc-274727.jpg"
+                alt=""
+                style="width: 60%"
+              />
+            </div>
+            <div class="book-container">
+              <img
+                class="bookImg"
+                src="./assets//books/Baisher_Bonna-Tasrif_Khan-2c6fc-274727.jpg"
+                alt=""
+                style="width: 60%"
+              />
+            </div>
+            <div class="book-container">
+              <img
+                class="bookImg"
+                src="./assets//books/Baisher_Bonna-Tasrif_Khan-2c6fc-274727.jpg"
+                alt=""
+                style="width: 60%"
+              />
+            </div>
+            <div class="book-container">
+              <img
+                class="bookImg"
+                src="./assets//books/Baisher_Bonna-Tasrif_Khan-2c6fc-274727.jpg"
+                alt=""
+                style="width: 60%"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div id="bookDetailsContainer" class="flex-col-2">
+          <div>
+            <h1 id="bookTitle"></h1>
+            <b id="bookWriter"></b>
+            <p id="bookDescription"></p>
+          </div>
+
+          <div class="flex-col-2">
+            <div class="increment-decrement">
+              <button onclick="decrement()">-</button>
+              <span id="value">1</span>
+              <button onclick="increment()">+</button>
+            </div>
+
+            <div style="display: flex; gap: 20px">
+              <button class="buy-now-button">Buy Now</button>
+              <button class="add-to-cart-button">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>© Copyright 2023</footer>
+    <script src="bookDetails.js"></script>
+  </body>
+</html>

@@ -1,5 +1,5 @@
-var container = document.querySelector('.grid-container');
-var books = [
+let container = document.querySelector('.grid-container');
+let books = [
     {
         "bookName": "বিজনেস ব্লুপ্রিন্ট (হার্ডকভার)",
         "writer": "মুহাম্মদ ইলিয়াস কাঞ্চন (কোচ কাঞ্চন)",
@@ -81,43 +81,50 @@ var books = [
         "reviews": 120
     }
 ];
+for (let i = 0; i < books.length; i++) {
+    let item = books[i];
 
-for (var i = 0; i < books.length; i++) {
-    var item = books[i];
-
-    var bookDiv = document.createElement('div');
+    let bookDiv = document.createElement('div');
     bookDiv.classList.add('flex-col');
 
-    var bookContainerDiv = document.createElement('div');
+    let bookLink = document.createElement('a');
+    bookLink.href = '/bookDetails.html?id=' + i;
+
+    let bookContainerDiv = document.createElement('div');
     bookContainerDiv.classList.add('book-container');
 
-    var bookImg = document.createElement('img');
+    let bookImg = document.createElement('img');
     bookImg.src = item.src;
     bookImg.alt = 'Book Image';
     bookImg.classList.add('book-img');
 
-
     bookContainerDiv.appendChild(bookImg);
 
-    var bookNameH6 = document.createElement('h6');
+    bookLink.appendChild(bookContainerDiv);
+
+    let bookNameH6 = document.createElement('h6');
     bookNameH6.textContent = item.bookName;
+    bookNameH6.addEventListener('click', function () {
+        window.location.href = bookLink.href;
+    });
 
-    var authorP = document.createElement('p');
+    let authorP = document.createElement('p');
     authorP.textContent = item.writer;
+    authorP.addEventListener('click', function () {
+        window.location.href = bookLink.href;
+    });
 
-    var reviewsSmall = document.createElement('small');
+    let reviewsSmall = document.createElement('small');
     reviewsSmall.textContent = item.reviews + ' reviews';
+    reviewsSmall.addEventListener('click', function () {
+        window.location.href = bookLink.href;
+    });
 
-    var addToCartButton = document.createElement('button');
+    let addToCartButton = document.createElement('button');
     addToCartButton.classList.add('add-to-cart-button');
     addToCartButton.textContent = 'Add to Cart';
 
-
-    var bookReviews = document.createElement('p');
-    bookReviews.classList.add('book-reviews');
-    bookReviews.textContent = item.reviews + ' reviews';
-
-    bookDiv.appendChild(bookContainerDiv);
+    bookDiv.appendChild(bookLink);
     bookDiv.appendChild(bookNameH6);
     bookDiv.appendChild(authorP);
     bookDiv.appendChild(reviewsSmall);
@@ -125,3 +132,4 @@ for (var i = 0; i < books.length; i++) {
 
     container.appendChild(bookDiv);
 }
+
