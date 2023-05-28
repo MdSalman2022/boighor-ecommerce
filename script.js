@@ -103,7 +103,7 @@ for (var i = 0; i < books.length; i++) {
     bookNameH6.textContent = item.bookName;
 
     var authorP = document.createElement('p');
-    authorP.textContent = item.author;
+    authorP.textContent = item.writer;
 
     var reviewsSmall = document.createElement('small');
     reviewsSmall.textContent = item.reviews + ' reviews';
@@ -116,7 +116,6 @@ for (var i = 0; i < books.length; i++) {
     var bookReviews = document.createElement('p');
     bookReviews.classList.add('book-reviews');
     bookReviews.textContent = item.reviews + ' reviews';
-    bookContainerDiv.appendChild(bookReviews);
 
     bookDiv.appendChild(bookContainerDiv);
     bookDiv.appendChild(bookNameH6);
