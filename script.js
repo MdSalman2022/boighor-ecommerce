@@ -122,9 +122,23 @@ for (let i = 0; i < books.length; i++) {
 
     let addToCartButton = document.createElement('button');
     addToCartButton.classList.add('add-to-cart-button');
+    addToCartButton.addEventListener('click', function () {
+        indexNumber = i;
+    });
     addToCartButton.textContent = 'Add to Cart';
 
+    addToCartButton.addEventListener("click", function () {
+        const url = `/orderPage.html?id=${indexNumber}`;
+
+        window.location.href = url;
+    });
+
+    let favoriteIcon = document.createElement('i');
+    favoriteIcon.classList.add('fas', 'fa-heart');
+
+
     bookDiv.appendChild(bookLink);
+    bookContainerDiv.appendChild(favoriteIcon);
     bookDiv.appendChild(bookNameH6);
     bookDiv.appendChild(authorP);
     bookDiv.appendChild(reviewsSmall);
@@ -132,4 +146,3 @@ for (let i = 0; i < books.length; i++) {
 
     container.appendChild(bookDiv);
 }
-

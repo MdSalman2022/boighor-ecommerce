@@ -91,66 +91,23 @@ let books = {
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga soluta nemo mollitia odit vitae beatae eveniet labore neque? Rerum autem sunt earum facere explicabo similique. Rem natus sequi cupiditate mollitia ea libero voluptatum nobis, fugiat unde minima veniam quam, tempore dolorum ut laudantium repudiandae impedit! Soluta totam vitae harum ipsam quos ut ullam expedita odit, dolorum hic perferendis sunt modi voluptatibus incidunt recusandae sint deleniti atque exercitationem laboriosam maiores at. Aperiam quibusdam itaque, corporis sapiente dolores ratione sint amet possimus, expedita odio corrupti harum quaerat? Expedita repellendus voluptates aliquid animi quaerat quasi? Recusandae amet autem deleniti iusto odit? Natus, dolor."
     },
 };
- 
+
+
 let queryString = window.location.search;
 let urlParams = new URLSearchParams(queryString);
 let bookId = urlParams.get("id");
- 
+
 let book = books[bookId];
- 
-let bookTitleElement = document.getElementById("bookTitle");
+
+
+let bookTitleElement = document.getElementById("bookName");
 bookTitleElement.textContent = book.bookName;
 
-let bookWriterElement = document.getElementById("bookWriter");
+let bookWriterElement = document.getElementById("writer");
 bookWriterElement.textContent = book.writer;
 
-let bookDescriptionElement = document.getElementById("bookDescription");
-bookDescriptionElement.textContent = book.description;
-
-let bookPriceElement = document.getElementById("bookPrice");
+let bookPriceElement = document.getElementById("priceValue");
 bookPriceElement.textContent = book.price;
 
-
-let bookImageElements = document.querySelectorAll(".flex-container .book-container img");
-bookImageElements.forEach(function (imageElement) {
-    imageElement.src = book.src;
-});
-
-
-let bookImageElement = document.querySelector(".book-container img");
+let bookImageElement = document.getElementById("bookImage");
 bookImageElement.src = book.src;
-
-let valueElement = document.getElementById("value");
-
-function increment() {
-    let value = parseInt(valueElement.innerText);
-    value++;
-    valueElement.innerText = value;
-}
-
-function decrement() {
-    let value = parseInt(valueElement.innerText);
-    if (value > 1) {
-        value--;
-        valueElement.innerText = value;
-    }
-}
-
-const buyNowButton = document.getElementById("buyNowButton");
-
-const indexNumber = bookId;
-
-buyNowButton.addEventListener("click", function () {
-    const url = `/orderPage.html?id=${indexNumber}`;
-
-    window.location.href = url;
-});
-
-const addToCart = document.getElementById("addToCart");
-
-
-addToCart.addEventListener("click", function () {
-    const url = `/orderPage.html?id=${indexNumber}`;
-
-    window.location.href = url;
-});

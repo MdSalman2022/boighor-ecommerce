@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="orderPage.css" />
+  </head>
+  <body>
+    <div style="background-color: #033926; color: white">
+      <div
+        class="flex-container"
+        style="
+          background-color: #033926;
+          color: white;
+          padding: 10px;
+          max-width: 1600px;
+          margin: auto;
+        "
+      >
+        <p>01812345678</p>
+        <p>Get 50% Off on selected items | Shop Now</p>
+        <div class="flex-container">
+          <p>Eng <i class="fa-solid fa-angle-down"></i></p>
+          <p>Location <i class="fa-solid fa-angle-down"></i></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <header class="">
+        <div class="flex-container">
+          <a href="index.html"
+            ><img class="logo" width="10px" src="./assets/logo.png" alt=""
+          /></a>
+          <p style="font-weight: 500; font-size: 14px">
+            Categories <i class="fa-solid fa-angle-down"></i>
+          </p>
+          <p style="font-weight: 500; font-size: 14px">Deals</p>
+          <p style="font-weight: 500; font-size: 14px">What's New</p>
+          <p style="font-weight: 500; font-size: 14px">Delivery</p>
+          <input class="search-input" type="text" placeholder="Search Book" />
+          <p
+            style="font-weight: 500; font-size: 14px"
+            style="font-weight: 500; font-size: 14px"
+            style="font-weight: 500; font-size: 14px"
+            style="font-weight: 500; font-size: 14px"
+          >
+            <i class="fa-regular fa-user"></i> Account
+          </p>
+          <p
+            style="font-weight: 500; font-size: 14px"
+            style="font-weight: 500; font-size: 14px"
+            style="font-weight: 500; font-size: 14px"
+            style="font-weight: 500; font-size: 14px"
+          >
+            <i class="fa-solid fa-cart-shopping"></i> Cart
+          </p>
+        </div>
+      </header>
+    </div>
+    <div class="container grid-cols-3">
+      <div class="card">
+        <h2>Review item and Shipping</h2>
+        <div class="flex-container">
+          <img id="bookImage" src="./assets/book.jpg" alt="" />
+          <div>
+            <h2 id="bookName">Book Name</h2>
+            <h3 id="writer">Writer</h3>
+          </div>
+          <div>
+            <h2 id="priceTitle">Price</h2>
+            <h3 id="priceValue">1</h3>
+          </div>
+        </div>
+      </div>
+      <div class="card flex-col-2">
+        <div>
+          <h1>Order Summary</h1>
+          <input
+            type="text"
+            class="search-input"
+            placeholder="Enter Coupon Code"
+          />
+          <button class="btn">Apply</button>
+        </div>
+        <h3>Payment Details</h3>
+        <div class="flex-col-2">
+          <div class="flex-container2">
+            <input type="checkbox" name="" id="" />
+            <span>Cash ON delivery</span>
+          </div>
+          <div class="flex-container2">
+            <input type="checkbox" name="" id="" />
+            <span>Paypal</span>
+          </div>
+          <div class="flex-container2">
+            <input type="checkbox" name="" id="" />
+            <span>Credit or Debit Card</span>
+          </div>
+        </div>
+
+        <div class="flex-col-2">
+          <label for="Email" class="flex-col-2">
+            <span>Email</span>
+            <input type="text" placeholder="Enter Email" class="text-input" />
+          </label>
+          <label for="Name" class="flex-col-2">
+            <span>Card Holder Name</span>
+            <input type="text" placeholder="Type here..." class="text-input" />
+          </label>
+        </div>
+      </div>
+      <div class="card">
+        <div class="flex-container">
+          <h2>Delivery Information</h2>
+          <div class="badge">Edit Information</div>
+        </div>
+        <div class="flex-col-2">
+          <div class="flex-container2">
+            <b>Name: </b>
+            <p>Salman</p>
+          </div>
+          <div class="flex-container2">
+            <b>Address: </b>
+            <p>West Shewrapara, Mirpur, Dhaka-1216</p>
+          </div>
+          <div class="flex-container2">
+            <b>City: </b>
+            <p>Dhaka</p>
+          </div>
+          <div class="flex-container2">
+            <b>Zip Code: </b>
+            <p>1216</p>
+          </div>
+          <div class="flex-container2">
+            <b>Mobile: </b>
+            <p>+8801860222102</p>
+          </div>
+          <div class="flex-container2">
+            <b>Email: </b>
+            <p>salman15-4523@diu.edu.bd</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>© Copyright 2023</footer>
+    <script src="orderPage.js"></script>
+  </body>
+</html>
